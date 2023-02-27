@@ -104,7 +104,7 @@ const Container = styled.div`
     grid-template-rows: 10% 78% 12%;
     gap: 0.1rem;
     overflow: hidden;
-    @media screen and (min-width: 360px) and (max-width: 480px) {
+    @media screen and (min-width: 720px) and (max-width: 1080px) {
         grid-auto-rows: 15% 70% 15%;
     }
     .chat-header {
@@ -134,6 +134,14 @@ const Container = styled.div`
         flex-direction: column;
         gap: 1rem;
         overflow: auto;
+        &::-webkit-scrollbar {
+            width: 0.2rem;
+            &-thumb {
+                background-color: #ffffff39;
+                width: 0.1rem;
+                border-radius: 1rem;
+            }
+        }
         .message {
             display: flex;
             align-items: center;
